@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD CLOTHING</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #222;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            background: url('https://img.freepik.com/premium-photo/cotton-jeans-black-glasses-flat-lay-photo_96930-1212.jpg?semt=ais_hybrid') no-repeat center center/cover;
+            height: 500px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        /* Products Section Styling */
+        .products {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .products h2 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .product-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin-top: 15px;
+            font-size: 1.5em;
+        }
+
+        .product-card p {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        .product-card button {
+            margin-top: 15px;
+            background-color: #222;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product-card button:hover {
+            background-color: #555;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Welcome to JD CLOTHING</h1>
+            <p>Your style, your identity.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Our Latest Collection</h2>
+        <div class="product-cards">
+            <div class="product-card">
+                <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTla6h6Mp---NW9Z6hx5cqVDYA2Y3qePCqX5g&s" alt="Product 1">
+                <h3>Leather Jacket</h3>
+                <p>$54.99</p>
+                <button>Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSywTj5coP2hTx3Cw3XvQcSo6wWncdQMbrrA&s" alt="Product 2">
+                <h3>Casual Shirt</h3>
+                <p>$44.99</p>
+                <button>Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="data:image/jpeg;base64,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" alt="Product 3">
+                <h3>Casual T-Shirt</h3>
+                <p>$19.99</p>
+                <button>Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="data:image/jpeg;base64,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" alt="Product 4">
+                <h3>Casual Pants</h3>
+                <p>$28.99</p>
+                <button>Shop Now</button>
+            </div>
+            <div class="product-card">
+                <img src="data:image/jpeg;base64,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" alt="Product 5">
+                <h3>Casual Jeans</h3>
+                <p>$39.99</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 JD CLOTHING | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
